@@ -1,0 +1,21 @@
+<!DOCTYPE html><html>
+<head>
+  <title>Create a product</title>
+</head>
+<body>
+<h3>Product creation form</h3>
+<form [formGroup]="productForm" (ngSubmit)="submit()">
+  <label>Product ID</label>
+  <input type="text" formControlName="product_id" placeholder="ID..."><br>
+  <label>Product Name</label>
+  <input type="text" formControlName= "name" placeholder="name..."><br>
+  <label>Category</label>
+  <input type="text" formControlName="category" placeholder="category.."><br>
+  <label>Price</label>
+  <input type="text" formControlName="price" placeholder="price.."><br>
+  <button type="submit">Add</button>
+</form>
+<p>last added:</p>
+<p>{{last_added}}</p>
+</body>
+</html>
