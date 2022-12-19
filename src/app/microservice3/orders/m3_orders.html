@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Orders</title>
+</head>
+<body>
+  <div class="Search container">
+    <span>Search order_id:</span>
+    <input type="text" #searchbox/>
+    <button (click)="searchTextChanged(searchbox.value)">Submit</button>
+  </div>
+  <p>{{orders}}</p>
+</body>
+</html>
