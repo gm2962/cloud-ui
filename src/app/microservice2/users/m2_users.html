@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Users</title>
+</head>
+<body>
+<div class="Search container">
+  <span>Search user_id:</span>
+  <input type="text" #searchbox/>
+  <button (click)="searchTextChanged(searchbox.value)">Submit</button>
+</div>
+<p>{{users}}</p><br>
+<p>User Address:</p><br>
+<p>{{address}}</p><br>
+<p>User Card info</p><br>
+<p>{{card}}</p>
+</body>
+</html>

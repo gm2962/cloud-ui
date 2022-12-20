@@ -9,6 +9,11 @@
   <span>Search product_id:</span>
   <input type="text" #searchbox/>
   <button (click)="searchTextChanged(searchbox.value)">Submit</button>
+  <p>Offset</p>
+  <input type="number" #offset/>
+  <p>Limit</p>
+  <input type="number" #limit/>
+  <button (click)="filter(offset.value, limit.value)">Filter</button>
 </div>
 <p>{{products}}</p>
 </body>

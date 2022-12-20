@@ -25,6 +25,29 @@ export class m1_products implements OnInit {
     }
   }
 
+  callpath: any = "";
+  filter(offset: any, limit: any)
+  {
+    this.callpath = "/products?offset="
+    if(offset != "") {
+      this.callpath = this.callpath.concat(offset)
+    }
+    else {
+      this.callpath = this.callpath.concat("0")
+    }
+
+    this.callpath = this.callpath.concat("&limit=")
+    if(limit != "") {
+      this.callpath = this.callpath.concat(limit)
+    }
+    else {
+      this.callpath = this.callpath.concat("5")
+    }
+
+    this.micro1_service.get_page(this.callpath).subscribe((data) => this.products = JSON.stringify(data));
+
+  }
+
 
 
 
